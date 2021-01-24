@@ -1,9 +1,33 @@
 .header {
 
+  ////////// HAMBURGUER MENU STYLE \\\\\\\\\\
+  &.open {
+
+    .overlay {
+      display: block;
+    }
+
+    .header__menu {
+      >span:first-child {
+        transform: rotate(45deg);
+      }
+
+      >span:nth-child(2) {
+        opacity: 0;
+      }
+
+      >span:last-child {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  ////////// NAVBAR \\\\\\\\\\
   nav {
     padding: 1.0625rem 1.5rem;
   }
 
+  ////////// LOGO  \\\\\\\\\\
   &__logo {
 
     img {
@@ -12,7 +36,7 @@
     }
   }
 
-  // MOBILE MENU
+  ////////// MENU \\\\\\\\\\
   &__menu {
     >span {
       display: block;
@@ -20,13 +44,16 @@
       height: 2px;
       background-color: black;
       margin-bottom: 3px;
+      transition: all 200ms ease-in-out;
+      transform-origin: 3px 1px;
 
       &:not(:last-child) {
-        margin-bottom: 3px;
+        margin-bottom: 5px;
       }
     }
   }
 
+  ////////// LINKS \\\\\\\\\\
   &__links {
 
     a {
@@ -64,6 +91,7 @@
     }
   }
 
+  ////////// BUTTON \\\\\\\\\\
   &__cta {
     font-size: $font-sm;
     color: $white;
@@ -72,5 +100,15 @@
     &:hover {
       opacity: 0.75;
     }
+  }
+
+  ////////// OVERLAY \\\\\\\\\\
+  .overlay {
+    position: fixed;
+    top: 3.8125rem;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-image: linear-gradient($darkBlue, transparent);
   }
 }
