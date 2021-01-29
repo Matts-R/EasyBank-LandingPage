@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,12 +23,12 @@
     <header class="header">
       <div class="overlay"></div>
 
-      <nav class="flex flex-jc-sb flex-ai-c">
+      <nav class="container flex flex-jc-sb flex-ai-c">
         <a href="/" class="header__logo">
           <img src="images/logo.svg" alt="Easybank Logo" />
         </a>
 
-        <a id="btnHamburguer" href="#" class="header__menu hide-for-desktop">
+        <a id="btnHamburguer" href="#" class="header__toggle hide-for-desktop">
           <span></span>
           <span></span>
           <span></span>
@@ -42,11 +42,95 @@
           <a href="#">Careers</a>
         </div>
 
-        <a href="#" class="button header__cta hide-for-mobile"
-          >Request Invite</a
+        <a href="#" class="button header__cta hide-for-mobile">
+          Request Invite</a
         >
       </nav>
+      <div id="mobileMenu" class="header__menu has-fade">
+        <a href="">Home</a>
+        <a href="">About</a>
+        <a href="">Contact</a>
+        <a href="">Blog</a>
+        <a href="">Careers</a>
+      </div>
     </header>
+    .header { ////////// HAMBURGUER MENU STYLE \\\\\\\\\\ &.open { .overlay {
+    display: block; .header__toggle { cursor: pointer; } } .header__toggle {
+    >span:first-child { transform: rotate(45deg); } >span:nth-child(2) {
+    opacity: 0; } >span:last-child { transform: rotate(-45deg); } } } //////////
+    NAV \\\\\\\\\\ nav { position: relative; background-color: $white;
+    padding-top: 1.0625rem; padding-bottom: 1.0625rem; } ////////// LOGO
+    \\\\\\\\\\ &__logo { img { width: 8.8125rem; height: 1.375rem; } }
+    ////////// HAMBURGUER MENU \\\\\\\\\\ &__toggle { >span { display: block;
+    width: 26px; height: 2px; background-color: black; margin-bottom: 3px;
+    transition: all 200ms ease-in-out; transform-origin: 3px 1px;
+    &:not(:last-child) { margin-bottom: 5px; } } } ////////// MOBILE MENU
+    \\\\\\\\\\ &__menu { position: relative; margin: 0px 1.5rem; margin-top:
+    1.5rem; padding: 1.625rem; border-radius: 10px; background: $white; a {
+    color: $darkBlue; padding: 0.625rem; display: block; text-align: center; } }
+    ////////// LINKS \\\\\\\\\\ &__links { a { position: relative; font-size:
+    $font-sm; color: $grayishBlue; transition: color font-size 300ms
+    ease-in-out; &:not(:last-child) { margin-right: 2rem; } &::before { content:
+    ""; position: absolute; display: block; height: 5px; left: 0px; right: 0px;
+    bottom: -30px; background: linear-gradient(to right, $limeGreen,
+    $brightCyan); opacity: 0; transition: opacity 300ms ease-in-out; } &:hover {
+    color: $darkBlue; font-size: 1rem; &::before { opacity: 1; } } } }
+    ////////// BUTTON \\\\\\\\\\ &__cta { font-size: $font-sm; color: $white;
+    transition: opacity 300ms ease-in-out; &:hover { opacity: 0.75; } }
+    ////////// OVERLAY \\\\\\\\\\ .overlay { position: fixed; top: 0; bottom:
+    0px; left: 0px; right: 0px; background-image: linear-gradient(to bottom
+    right, $limeGreen, $brightCyan, transparent); } } .header { //////////
+    HAMBURGUER MENU STYLE \\\\\\\\\\ &.open { .overlay { display: block;
+    .header__toggle { cursor: pointer; } } .header__toggle { >span:first-child {
+    transform: rotate(45deg); } >span:nth-child(2) { opacity: 0; }
+    >span:last-child { transform: rotate(-45deg); } } } ////////// NAV
+    \\\\\\\\\\ nav { position: relative; background-color: $white; padding-top:
+    1.0625rem; padding-bottom: 1.0625rem; } ////////// LOGO \\\\\\\\\\ &__logo {
+    img { width: 8.8125rem; height: 1.375rem; } } ////////// HAMBURGUER MENU
+    \\\\\\\\\\ &__toggle { >span { display: block; width: 26px; height: 2px;
+    background-color: black; margin-bottom: 3px; transition: all 200ms
+    ease-in-out; transform-origin: 3px 1px; &:not(:last-child) { margin-bottom:
+    5px; } } } ////////// MOBILE MENU \\\\\\\\\\ &__menu { position: relative;
+    margin: 0px 1.5rem; margin-top: 1.5rem; padding: 1.625rem; border-radius:
+    10px; background: $white; a { color: $darkBlue; padding: 0.625rem; display:
+    block; text-align: center; } } ////////// LINKS \\\\\\\\\\ &__links { a {
+    position: relative; font-size: $font-sm; color: $grayishBlue; transition:
+    color font-size 300ms ease-in-out; &:not(:last-child) { margin-right: 2rem;
+    } &::before { content: ""; position: absolute; display: block; height: 5px;
+    left: 0px; right: 0px; bottom: -30px; background: linear-gradient(to right,
+    $limeGreen, $brightCyan); opacity: 0; transition: opacity 300ms ease-in-out;
+    } &:hover { color: $darkBlue; font-size: 1rem; &::before { opacity: 1; } } }
+    } ////////// BUTTON \\\\\\\\\\ &__cta { font-size: $font-sm; color: $white;
+    transition: opacity 300ms ease-in-out; &:hover { opacity: 0.75; } }
+    ////////// OVERLAY \\\\\\\\\\ .overlay { position: fixed; top: 0; bottom:
+    0px; left: 0px; right: 0px; background-image: linear-gradient(to bottom
+    right, $limeGreen, $brightCyan, transparent); } } .header { //////////
+    HAMBURGUER MENU STYLE \\\\\\\\\\ &.open { .overlay { display: block;
+    .header__toggle { cursor: pointer; } } .header__toggle { >span:first-child {
+    transform: rotate(45deg); } >span:nth-child(2) { opacity: 0; }
+    >span:last-child { transform: rotate(-45deg); } } } ////////// NAV
+    \\\\\\\\\\ nav { position: relative; background-color: $white; padding-top:
+    1.0625rem; padding-bottom: 1.0625rem; } ////////// LOGO \\\\\\\\\\ &__logo {
+    img { width: 8.8125rem; height: 1.375rem; } } ////////// HAMBURGUER MENU
+    \\\\\\\\\\ &__toggle { >span { display: block; width: 26px; height: 2px;
+    background-color: black; margin-bottom: 3px; transition: all 200ms
+    ease-in-out; transform-origin: 3px 1px; &:not(:last-child) { margin-bottom:
+    5px; } } } ////////// MOBILE MENU \\\\\\\\\\ &__menu { position: relative;
+    margin: 0px 1.5rem; margin-top: 1.5rem; padding: 1.625rem; border-radius:
+    10px; background: $white; a { color: $darkBlue; padding: 0.625rem; display:
+    block; text-align: center; } } ////////// LINKS \\\\\\\\\\ &__links { a {
+    position: relative; font-size: $font-sm; color: $grayishBlue; transition:
+    color font-size 300ms ease-in-out; &:not(:last-child) { margin-right: 2rem;
+    } &::before { content: ""; position: absolute; display: block; height: 5px;
+    left: 0px; right: 0px; bottom: -30px; background: linear-gradient(to right,
+    $limeGreen, $brightCyan); opacity: 0; transition: opacity 300ms ease-in-out;
+    } &:hover { color: $darkBlue; font-size: 1rem; &::before { opacity: 1; } } }
+    } ////////// BUTTON \\\\\\\\\\ &__cta { font-size: $font-sm; color: $white;
+    transition: opacity 300ms ease-in-out; &:hover { opacity: 0.75; } }
+    ////////// OVERLAY \\\\\\\\\\ .overlay { position: fixed; top: 0; bottom:
+    0px; left: 0px; right: 0px; background-image: linear-gradient(to bottom
+    right, $limeGreen, $brightCyan, transparent); } }
+
     <!-- END: HEADER CONTENT  -->
 
     <!-- BEGIN: JQUERY__CDN -->
